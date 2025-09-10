@@ -1,0 +1,194 @@
+@@ .. @@
+ :root {
+   /* Palette */
+-  --color-primary: #0A400C;
+-  --color-secondary: #819067;
+-  --color-accent: #B1AB86;
+-  --color-bg: #f6f7f4;
++  --color-primary: #4B5E40;
++  --color-secondary: #A6B984;
++  --color-accent: #C6D9A4;
++  --color-bg: #F7F9F4;
+   --color-surface: #ffffff;
+-  --color-text: #1e2a1e;
+-  --color-muted: #556055;
++  --color-text: #2C2C2C;
++  --color-muted: #5A5A5A;
+
+   /* Elevation & radii */
+-  --shadow-sm: 0 1px 2px rgba(10, 64, 12, 0.06);
+-  --shadow-md: 0 4px 14px rgba(10, 64, 12, 0.12);
+-  --shadow-lg: 0 12px 30px rgba(10, 64, 12, 0.16);
+-  --radius-sm: 10px;
+-  --radius-md: 14px;
+-  --radius-lg: 18px;
++  --shadow-sm: 0 2px 4px rgba(75, 94, 64, 0.08);
++  --shadow-md: 0 4px 12px rgba(75, 94, 64, 0.12);
++  --shadow-lg: 0 8px 24px rgba(75, 94, 64, 0.16);
++  --radius-sm: 8px;
++  --radius-md: 16px;
++  --radius-lg: 24px;
+ }
+
+ /* Top control bar */
+@@ .. @@
+ .category-controls .MuiButton-contained {
+   background-color: var(--color-primary) !important;
+   box-shadow: var(--shadow-sm);
++  border-radius: var(--radius-sm) !important;
+ }
+ .category-controls .MuiButton-contained:hover {
+-  background-color: #083708 !important;
++  background-color: #2A3226 !important;
+   box-shadow: var(--shadow-md);
+ }
+ .category-controls .MuiButton-outlined {
+   color: var(--color-primary) !important;
+   border-color: var(--color-primary) !important;
+-  background-color: rgba(10, 64, 12, 0.05);
++  background-color: rgba(75, 94, 64, 0.05);
++  border-radius: var(--radius-sm) !important;
+ }
+ .category-controls .MuiButton-outlined:hover {
+-  background-color: rgba(10, 64, 12, 0.1);
++  background-color: rgba(75, 94, 64, 0.1);
+ }
+
+ /* Main container */
+@@ .. @@
+ /* Category cards */
+ .category-card {
+-  background-color: #f9faf9 !important;
++  background-color: var(--color-surface) !important;
+   border-radius: var(--radius-md) !important;
+   box-shadow: var(--shadow-md) !important;
+   transition: transform 0.18s ease, box-shadow 0.18s ease !important;
+@@ .. @@
+   border-radius: 50%;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+-  box-shadow: 0 6px 22px rgba(10, 64, 12, 0.10);
++  box-shadow: 0 6px 22px rgba(75, 94, 64, 0.10);
+   transition: background-color 0.18s ease, transform 0.18s ease;
+ }
+ .category-card:hover .category-card__icon {
+@@ .. @@
+ /* Dialog polish */
+ .category-dialog .MuiPaper-root,
+ .others-dialog .MuiPaper-root,
+ .create-dialog .MuiPaper-root {
+   border-radius: var(--radius-lg) !important;
+   box-shadow: var(--shadow-lg) !important;
+ }
+ .category-dialog .MuiDialogTitle-root,
+ .others-dialog .MuiDialogTitle-root,
+ .create-dialog .MuiDialogTitle-root {
+-  border-bottom: 1px solid rgba(10, 64, 12, 0.08);
++  border-bottom: 1px solid rgba(75, 94, 64, 0.08);
+   color: var(--color-primary);
+   font-weight: 800;
+ }
+ .category-dialog .MuiDialogActions-root,
+ .others-dialog .MuiDialogActions-root,
+ .create-dialog .MuiDialogActions-root {
+-  border-top: 1px solid rgba(10, 64, 12, 0.08);
++  border-top: 1px solid rgba(75, 94, 64, 0.08);
+ }
+
+ /* Inputs in dialogs */
+@@ .. @@
+ .create-dialog .MuiOutlinedInput-notchedOutline,
+ .others-dialog .MuiOutlinedInput-notchedOutline,
+ .category-dialog .MuiOutlinedInput-notchedOutline {
+-  border-color: rgba(10, 64, 12, 0.25);
++  border-color: rgba(75, 94, 64, 0.25);
+ }
+ .create-dialog .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline,
+ .others-dialog .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline,
+@@ .. @@
+ }
+
+ /* Admin/User badges */
+-.admin-badge { color: #F7C948 !important; }  /* gold */
+-.user-badge  { color: #2D9CDB !important; }  /* teal/blue */
++.admin-badge { color: #FF9800 !important; }  /* orange */
++.user-badge  { color: #2196F3 !important; }  /* blue */
+
+ /* Category-specific themes (match toKey(name)) */
+@@ .. @@
+ /* Water Supply */
+ .cat-watersupply .category-card__icon,
+ .icon-watersupply { background-color: #E9F3FF !important; }
+ .cat-watersupply .MuiSvgIcon-root,
+ .icon-watersupply .MuiSvgIcon-root { color: #2F80ED !important; }
+
+ /* Sanitation */
+ .cat-sanitation .category-card__icon,
+ .icon-sanitation { background-color: #E9F7EF !important; }
+ .cat-sanitation .MuiSvgIcon-root,
+ .icon-sanitation .MuiSvgIcon-root { color: #2D9D65 !important; }
+
+ /* Environment */
+ .cat-environment .category-card__icon,
+ .icon-environment { background-color: #ECF8F1 !important; }
+ .cat-environment .MuiSvgIcon-root,
+ .icon-environment .MuiSvgIcon-root { color: #27AE60 !important; }
+
+ /* Construction */
+ .cat-construction .category-card__icon,
+ .icon-construction { background-color: #FFF5E6 !important; }
+ .cat-construction .MuiSvgIcon-root,
+ .icon-construction .MuiSvgIcon-root { color: #F2994A !important; }
+
+ /* Roads */
+ .cat-roads .category-card__icon,
+ .icon-roads { background-color: #F1F2F4 !important; }
+ .cat-roads .MuiSvgIcon-root,
+ .icon-roads .MuiSvgIcon-root { color: #4F4F4F !important; }
+
+ /* Electricity */
+ .cat-electricity .category-card__icon,
+ .icon-electricity { background-color: #FFF9E6 !important; }
+ .cat-electricity .MuiSvgIcon-root,
+ .icon-electricity .MuiSvgIcon-root { color: #F2C94C !important; }
+
+ /* Other / Others */
+ .cat-other .category-card__icon,
+ .cat-others .category-card__icon,
+ .icon-other, .icon-others { background-color: #EEF1F5 !important; }
+ .cat-other .MuiSvgIcon-root,
+ .cat-others .MuiSvgIcon-root,
+ .icon-other .MuiSvgIcon-root,
+ .icon-others .MuiSvgIcon-root { color: #7E8A9A !important; }
+
+ /* Hover icon highlight */
+ .category-card:hover .MuiSvgIcon-root {
+   filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));
+ }
+
+ /* Responsive tweaks */
+ @media (max-width: 599px) {
+   .category-controls { gap: 8px; }
+   .category-card { padding: 6px !important; }
+   .category-card__icon { width: 50px !important; height: 50px !important; margin-bottom: 4px !important; }
+   .category-card .MuiTypography-subtitle1 { font-size: 0.9rem !important; }
+   .category-card .MuiTypography-caption { font-size: 0.72rem !important; }
+ }
++
++/* Global MUI overrides for consistent olive theme */
++.MuiButton-root {
++  border-radius: var(--radius-sm) !important;
++}
++
++.MuiCard-root {
++  border-radius: var(--radius-md) !important;
++}
++
++.MuiPaper-root {
++  border-radius: var(--radius-md) !important;
++}
++
++.MuiDialog-paper {
++  border-radius: var(--radius-lg) !important;
++}
